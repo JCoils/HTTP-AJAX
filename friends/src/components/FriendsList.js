@@ -63,7 +63,7 @@ export default class FriendList extends Component {
               <p>Name: {friend.name} </p>
               <p>Age: {friend.age} </p>
               <p>Email: {friend.email} </p>
-              <button onClick={e => this.deleteFriend(e,friend.id)}>X</button>
+              <button onClick={e => this.deleteFriend(e,friend.id)}>Delete</button>
            </div>
   
            ))}
