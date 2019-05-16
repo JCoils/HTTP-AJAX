@@ -16,3 +16,5 @@ const FriendCard = props => {
 };
 
 export default FriendCard;
+
+

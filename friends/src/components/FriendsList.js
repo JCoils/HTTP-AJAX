@@ -25,7 +25,7 @@ export default class FriendList extends Component {
           });
       }
 
-      addFriend = friend => {
+          addFriend = friend => {
         axios
         .post('http://localhost:5000/friends', friend)
         .then(res => {
@@ -58,11 +58,9 @@ export default class FriendList extends Component {
 
     render(){
       return(
-          <div className= "friendlistwrapper">
+          <div className= "friendlist">
            {this.state.friends.map(friend => ( <div key = {friend.id}>
-              <p>Name: {friend.name} </p>
-              <p>Age: {friend.age} </p>
-              <p>Email: {friend.email} </p>
+            <FriendDetails key={friend.id} friend={friend} />
               <button onClick={e => this.deleteFriend(e,friend.id)}>Delete</button>
            </div>
   
